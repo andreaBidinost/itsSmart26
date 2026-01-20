@@ -58,6 +58,65 @@ h1 span {
   padding-block: 1rem 2rem;
 }
 
+/* New section (form) */
+.new {
+  width: min(1100px, 92%);
+  margin: 0 auto 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0.85rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.new input {
+  flex: 1 1 220px;
+  min-width: 180px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--card) 85%, var(--bg));
+  color: var(--text);
+  padding: 0.65rem 0.8rem;
+  font-size: 0.95rem;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.new input::placeholder { color: color-mix(in oklab, var(--muted) 70%, transparent); }
+
+.new input:focus-visible {
+  outline: none;
+  border-color: color-mix(in oklab, var(--accent) 45%, var(--border));
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 22%, transparent);
+  background: var(--card);
+}
+
+.new button {
+  flex: 0 0 auto;
+  border: 1px solid color-mix(in oklab, var(--accent) 20%, var(--border));
+  background: var(--accent);
+  color: white;
+  border-radius: 12px;
+  padding: 0.65rem 1rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.new button:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+.new button:active { transform: translateY(0); }
+
+/* Input error feedback */
+.input-error {
+  border-color: #ef4444 !important; /* red-500 */
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
+}
+
 /* Card */
 .register {
   position: relative;

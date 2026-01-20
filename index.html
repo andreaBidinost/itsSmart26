@@ -12,6 +12,12 @@
 <body>
     <h1>Andamento temperature</h1>
 
+    <div class="new" aria-label="Nuova registrazione temperatura">
+        <input id="macchinaInput" type="text" placeholder="Nome macchina" aria-label="Nome macchina" autocomplete="off" inputmode="text">
+        <input id="temperaturaInput" type="text" placeholder="Temperatura" aria-label="Temperatura" autocomplete="off" inputmode="decimal">
+        <button id="aggiungiBtn" type="button" aria-label="Aggiungi nuova riga">Aggiungi</button>
+    </div>
+
     <div class="container">
         <div class="register">
             <div class="macchina">Tornio</div>
@@ -26,5 +32,6 @@
             <div class="temperatura">45.4</div>
         </div>
     </div>
+    <script defer src="./app.js"></script>
 </body>
 </html>
